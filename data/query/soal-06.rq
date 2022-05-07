@@ -1,0 +1,19 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?name ?hobby ?favFood
+WHERE {
+  ?s person:firstName ?firstName;
+     person:lastName ?lastName;
+     person:hobby ?hobby;
+  BIND(concat(?firstName," ",?lastName) AS ?name).
+  OPTIONAL 
+  {
+    VALUES(?name ?favFood)
+    {
+      ("Kukun Kurniawan" "Rendang")
+      ("Ramdan Poernama" "Tacos")
+      ("Yanuardi Salam" "Seafood paella")
+    }
+  }
+}
+

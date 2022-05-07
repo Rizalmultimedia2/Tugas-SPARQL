@@ -1,0 +1,14 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?name 
+WHERE {
+  { ?s person:firstName ?firstName;
+     person:lastName ?lastName;
+     BIND(concat(?firstName," ",?lastName) AS ?name).
+     }
+     UNION 
+     {
+         VALUES (?name)
+         {("Rizal Hidayat") ("Dede Nurzaman") ("Iis Marchelina")}
+     }
+}

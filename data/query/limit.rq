@@ -1,0 +1,15 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?name ?email ?gender ?city ?hobby ?job 
+WHERE {
+  ?s person:firstName ?firstName;
+     person:lastName ?lastName;
+     person:email ?email;
+     person:gender ?gender;
+     person:city ?city;
+     person:hobby ?hobby;
+     person:job ?job.
+     BIND(concat(?firstName," ",?lastName) AS ?name).
+}
+GROUP BY ?name ?email ?gender ?city ?hobby ?job ?social_media
+LIMIT 3

@@ -1,0 +1,10 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+  SELECT ?city ?job (GROUP_CONCAT(?person; separator=", ") AS ?persons) 
+  WHERE {
+    ?s   person:city ?city;
+  	     person:job ?job;
+         person:firstName ?person.
+  } 
+  GROUP BY ?city ?job ?persons
+  HAVING(COUNT(?person) > 1)

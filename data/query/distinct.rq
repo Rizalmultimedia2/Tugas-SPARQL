@@ -1,0 +1,6 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT DISTINCT ?city  
+WHERE {
+  ?s person:city ?city;
+}

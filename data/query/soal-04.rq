@@ -1,0 +1,9 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?name (COUNT(?socmed) as ?count_socmed) 
+WHERE {
+  ?s   person:firstName ?name;
+       person:hasSocmed ?socmed.
+}
+GROUP BY ?name
+HAVING(?count_socmed = 4)

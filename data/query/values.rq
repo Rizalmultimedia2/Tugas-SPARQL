@@ -1,0 +1,15 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?name ?hobby
+WHERE {
+  { ?s person:firstName ?firstName;
+     person:lastName ?lastName;
+     person:hobby ?hobby;
+     BIND(concat(?firstName," ",?lastName) AS ?name).
+     }
+     UNION 
+     {
+         VALUES (?name ?hobby)
+         {("Rizal Hidayat" "Playing Genshin") ("Dede Nurzaman" "Touring") ("Iis Marchelina" "Dancing")}
+     }
+}

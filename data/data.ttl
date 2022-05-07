@@ -1,0 +1,161 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix d:  <http://learningsparql.com/ns/data#> .
+@prefix person: <http://learningsparql.com/ns/person#> .
+@prefix fb:  <http://learningsparql.com/ns/facebook#> .
+@prefix ig:  <http://learningsparql.com/ns/instagram#> .
+@prefix tk:  <http://learningsparql.com/ns/tiktok#> .
+@prefix tw:  <http://learningsparql.com/ns/twitter#> .
+
+
+# People
+d:i2001 rdf:type d:Person;
+        person:firstName "Kukun" ; 
+        person:lastName  "Kurniawan" ; 
+        person:gender    "Male";
+        person:email     "kukunshie20@gmail.com" ; 
+        person:city      "Kuningan" ; 
+        person:hobby     "Coding" ; 
+        person:job      "Programmer" ; 
+        person:hasSocmed fb:fb100, ig:ig300, tk:tk400.
+
+d:i2002 rdf:type d:Person;
+        person:firstName "Ramdan" ; 
+        person:lastName  "Poernama" ; 
+        person:gender    "Male";
+        person:email     "Ramdanpoernama@gmail.com" ; 
+        person:city      "Jakarta" ; 
+        person:hobby     "Riding" ; 
+        person:job      "factory employee" ; 
+        person:hasSocmed ig:ig301, tw:tw201 .
+
+d:i2003 rdf:type d:Person;
+        person:firstName "Yanuardi" ; 
+        person:lastName  "Salam" ; 
+        person:gender    "Male";
+        person:email     "salamyanuardi@gmail.com" ; 
+        person:city      "Banjar" ; 
+        person:hobby     "Playing games" ; 
+        person:job      "Gamers" ; 
+        person:hasSocmed fb:fb104 .
+
+d:i2004 rdf:type d:Person;
+        person:firstName "Putri" ; 
+        person:lastName  "Handayani" ; 
+        person:gender    "Female";
+        person:email     "handayani209@gmail.com" ; 
+        person:city      "Cirebon" ; 
+        person:hobby     "Desain" ; 
+        person:job      "Desainer" ; 
+        person:hasSocmed tw:tw202 .
+
+d:i2005 rdf:type d:Person;
+        person:firstName "Lalan" ; 
+        person:lastName  "Hayalan" ; 
+        person:gender    "Female";
+        person:email     "lalan28@gmail.com" ; 
+        person:city      "Majalengka" ; 
+        person:hobby     "Singing" ; 
+        person:job      "Nurse" ; 
+        person:hasSocmed fb:fb103, ig:ig302, tw:tw200, tk:tk402 .
+
+d:i2006 rdf:type d:Person;
+        person:firstName "Idan" ; 
+        person:lastName  "Nurhidan" ; 
+        person:gender    "Male";
+        person:email     "nuerhidan20@gmail.com" ; 
+        person:city      "Banjar" ; 
+        person:hobby     "Football" ; 
+        person:job      "Futsal Player" ; 
+        person:hasSocmed tw:tw203 .
+
+d:i2007 rdf:type d:Person;
+        person:firstName "Naila" ; 
+        person:lastName  "Niamilahi" ; 
+        person:gender    "Female";
+        person:email     "naila98@gmail.com" ; 
+        person:city      "Majalengka" ; 
+        person:hobby     "Singing" ; 
+        person:job      "Nurse" ; 
+        person:hasSocmed ig:ig303, fb:fb101, tk:tk401 .
+
+d:i2008 rdf:type d:Person;
+        person:firstName "jajang" ; 
+        person:lastName  "Kurniawan" ; 
+        person:gender    "Male";
+        person:email     "jakur201@gmail.com" ; 
+        person:city      "Banjar" ; 
+        person:hobby     "Playing games" ; 
+        person:job      "Gamers" ; 
+        person:hasSocmed fb:fb102, tk:tk403 .
+
+# FB
+fb:fb100 rdf:type d:Social_media; 
+         d:username "kukunkurniawan" ;
+         d:email "kukunshie20@gmail.com".
+
+fb:fb101 rdf:type d:Social_media; 
+         d:username "niamilahi12" ;
+         d:email "naila98@gmail.com".
+
+fb:fb102 rdf:type d:Social_media; 
+         d:username "jakur20" ;
+         d:email "jakur201@gmail.com".
+
+fb:fb103 rdf:type d:Social_media; 
+         d:username "lalanhayalan" ;
+         d:email "lalan28@gmail.com".
+
+fb:fb104 rdf:type d:Social_media; 
+         d:username "lalanhayalan" ;
+         d:email "lalan28@gmail.com".
+
+#Twitter
+tw:tw200 rdf:type d:Social_media; 
+         d:username "lalanhayalann" ;
+         d:email "lalan28@gmail.com".
+
+tw:tw201 rdf:type d:Social_media; 
+         d:username "rhamdans" ;
+         d:email "Ramdanpoernama@gmail.com".         
+
+tw:tw202 rdf:type d:Social_media; 
+         d:username "handayani" ;
+         d:email "fjohn7@gmail.com".        
+
+tw:tw203 rdf:type d:Social_media; 
+         d:username "idannur" ;
+         d:email "nuerhidan20@gmail.com".   
+
+#Instagram
+ig:ig300 rdf:type d:Social_media; 
+         d:username "kukunshie20" ;
+         d:email "kukunshie20@gmail.com".
+
+ig:ig301 rdf:type d:Social_media; 
+         d:username "rhamdan" ;
+         d:email "Ramdanpoernama@gmail.com".         
+
+ig:ig302 rdf:type d:Social_media; 
+         d:username "Lalanhayalan01" ;
+         d:email "lalan28@gmail.com".         
+
+ig:ig303 rdf:type d:Social_media; 
+         d:username "nailalala" ; 
+         d:email "naila98@gmail.com".
+
+#Tiktok
+tk:tk400 rdf:type d:Social_media; 
+         d:username "kukunshie" ;
+         d:email "kukunshie20@gmail.com".
+
+tk:tk401 rdf:type d:Social_media; 
+         d:username "nailala" ;
+         d:email "naila98@gmail.com".         
+
+tk:tk402 rdf:type d:Social_media; 
+         d:username "lalan78" ;
+         d:email "lalan28@gmail.com".         
+
+tk:tk403 rdf:type d:Social_media; 
+         d:username "jakur20" ; 
+         d:email "jakur201@gmail.com".            

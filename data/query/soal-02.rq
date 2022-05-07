@@ -1,0 +1,9 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?city (GROUP_CONCAT(?person; separator=", ") AS ?persons) 
+WHERE {
+  ?s   person:city ?city;
+	     person:firstName ?person.
+}
+GROUP BY ?city ?persons
+HAVING(COUNT(?person) > 1)

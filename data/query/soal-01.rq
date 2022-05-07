@@ -1,0 +1,14 @@
+PREFIX person: <http://learningsparql.com/ns/person#>
+
+SELECT ?firstName ?lastName ?email ?gender ?city ?hobby ?job (GROUP_CONCAT(?socmed; separator=", ") AS ?social_media)
+WHERE {
+  ?s person:firstName ?firstName;
+     person:lastName ?lastName;
+     person:email ?email;
+     person:gender ?gender;
+     person:city ?city;
+     person:hobby ?hobby;
+     person:job ?job;
+     person:hasSocmed ?socmed.
+}
+GROUP BY ?firstName ?lastName ?email ?gender ?city ?hobby ?job ?social_media
